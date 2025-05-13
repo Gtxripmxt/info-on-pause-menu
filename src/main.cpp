@@ -31,7 +31,7 @@ class $modify(MyPauseLayer, PauseLayer) {
                 auto infolayerthing = InfoLayer::create();
                 auto ccscene = utils::get<cocos2d::CCScene>();
                 auto zOrder = ccscene->getHighestChildZ();
-                scene->addChild(infolayerthing, zOrder + 1);
+                ccscene->addChild(infolayerthing, zOrder + 1);
                 infolayerthing->showLayer(false);
 	}
 };
