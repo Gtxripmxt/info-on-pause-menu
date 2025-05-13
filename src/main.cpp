@@ -28,7 +28,7 @@ class $modify(MyPauseLayer, PauseLayer) {
 	}
 
 	void onInfoButton(CCObject*) {
-                auto infolayerthing = InfoLayer::create())
+                auto infolayerthing = InfoLayer::create();
                 auto ccscene = utils::get<cocos2d::CCScene>();
                 auto zOrder = ccscene->getHighestChildZ();
                 scene->addChild(infolayerthing, zOrder + 1);
