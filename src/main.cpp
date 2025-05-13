@@ -28,7 +28,7 @@ class $modify(MyPauseLayer, PauseLayer) {
 	}
 
 	void onInfoButton(CCObject*) {
-            auto infoLayer = InfoLayer::create(GJGameLevel* p0, GJUserScore* p1, GJLevelList* p2);
+            auto infoLayer = InfoLayer::create(GJGameLevel* level, GJUserScore* user, GJLevelList* levelList);
             infoLayer->show();
 	}
 };
