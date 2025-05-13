@@ -1,0 +1,14 @@
+{
+	"geode": "4.3.1",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "gtxripmxt.i_need_name_ideas",
+	"name": "i need name ideas",
+	"version": "v1.0.0",
+	"developer": "Gtxripmxt",
+	"description": "adds a info button to the pause menu, whuch opens the InfoLayer"
+}
