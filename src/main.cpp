@@ -3,6 +3,7 @@
 using namespace geode::prelude;
 
 #include <Geode/modify/PauseLayer.hpp>
+#include <Geode/modify/InfoLayer.hpp>
 class $modify(MyPauseLayer, PauseLayer) {
 	void customSetup() {
 		PauseLayer::customSetup();
