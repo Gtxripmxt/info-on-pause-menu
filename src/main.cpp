@@ -29,6 +29,7 @@ class $modify(MyPauseLayer, PauseLayer) {
 	}
 
 	void onInfoButton(CCObject*) {
+	    auto playLayer = GameManager::sharedState()->getPlayLayer();
             auto level = playLayer->m_level;
             auto infoLayer = InfoLayer::create(level);
             infoLayer->show();
