@@ -8,8 +8,6 @@ class $modify(MyPauseLayer, PauseLayer) {
 	void customSetup() {
 		PauseLayer::customSetup();
 
-		log::info("customSetup override called");
-
 		auto infoButton = CCMenuItemSpriteExtra::create(
 			CCSprite::createWithSpriteFrameName("GJ_infoBtn_001.png"),
 			this,
