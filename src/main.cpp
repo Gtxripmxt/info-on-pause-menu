@@ -28,10 +28,29 @@ class $modify(MyPauseLayer, PauseLayer) {
 	}
 
 	void onInfoButton(CCObject*) {
-                auto infolayerthing = InfoLayer::create();
-                auto ccscene = utils::get<cocos2d::CCScene>();
-                auto zOrder = ccscene->getHighestChildZ();
-                ccscene->addChild(infolayerthing, zOrder + 1);
-                infolayerthing->showLayer(false);
+    auto playLayer = GameManager::sharedState()->getPlayLayer();
+    if (!playLayer) {
+        log::warn("PlayLayer not found!");
+        return;
+    }
+
+    auto level = playLayer->m_level;
+    if (!level) {
+        log::warn("Level not found!");
+        return;
+    }
+
+    auto infolayerthing = InfoLayer::create(level, nullptr, nullptr);
+
+    auto ccscene = utils::get<cocos2d::CCScene>();
+    if (!ccscene) {
+        log::warn("CCScene not found!");
+        return;
+    }
+
+    auto zOrder = ccscene->getHighestChildZ();
+
+    ccscene->addChild(infolayerthing, zOrder + 1);
+    infolayerthing->showLayer(false);
 	}
 };
