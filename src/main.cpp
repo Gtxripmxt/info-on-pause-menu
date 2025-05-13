@@ -28,7 +28,10 @@ class $modify(MyPauseLayer, PauseLayer) {
 	}
 
 	void onInfoButton(CCObject*) {
-            auto infoLayer = InfoLayer::create(GJGameLevel* level, GJUserScore* user, GJLevelList* levelList);
-            infoLayer->show();
+                auto infolayerthing = InfoLayer::create())
+                auto ccscene = utils::get<cocos2d::CCScene>();
+                auto zOrder = ccscene->getHighestChildZ();
+                scene->addChild(infolayerthing, zOrder + 1);
+                infolayerthing->showLayer(false);
 	}
 };
