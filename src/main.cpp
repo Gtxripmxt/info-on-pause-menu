@@ -5,7 +5,6 @@ using namespace geode::prelude;
 #include <Geode/modify/PauseLayer.hpp>
 class $modify(MyPauseLayer, PauseLayer) {
 	void customSetup() {
-		// Call original setup
 		PauseLayer::customSetup();
 
 		log::info("customSetup override called");
@@ -21,7 +20,8 @@ class $modify(MyPauseLayer, PauseLayer) {
 			log::warn("center-button-menu not found!");
 			return;
 		}
-
+                infoButton->setScale(1.2f);
+			
 		infoButton->setID("info-button"_spr);
 		menu->addChild(infoButton);
 
