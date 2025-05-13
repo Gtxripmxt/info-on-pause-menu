@@ -29,6 +29,7 @@ class $modify(MyPauseLayer, PauseLayer) {
 	}
 
 	void onInfoButton(CCObject*) {
-		FLAlertLayer::create("Ok", "OK", "OK")->show();
+            auto infoLayer = InfoLayer::create(m_level);
+            infoLayer->show();
 	}
 };
